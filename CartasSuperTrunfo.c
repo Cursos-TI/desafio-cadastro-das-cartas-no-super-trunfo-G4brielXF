@@ -18,8 +18,12 @@ int main() {
     int Pontos1 = 30; 
     float DensidadePopulacional1 = (float) População1 / Área1;
     float PIBpercapta1 = (float) PIB1 / População1;
+    float SuperPoder1 = (float) População1 + Área1 + PIB1 + Pontos1 + PIBpercapta1 + DensidadePopulacional1;
 
     /*Carta 1: local para cadastrar as informações*/
+    
+    printf ("** CADASTRE A CIDADE 1 ** \n");
+
     printf ("Digite a letra do Estado 1: \n");
     scanf (" %c", &Estado1);
 
@@ -41,6 +45,8 @@ int main() {
     printf ("Digite quantos pontos turísticos há na cidade 1: \n");
     scanf (" %d", &Pontos1);
 
+    printf ("\n");
+
     //Calculo para a Densidade Populacional
 
     printf ("**VAMOS CALCULAR A DENSIDADE POPULACIONAL DA CIDADE 1** \n");
@@ -52,14 +58,18 @@ int main() {
 
     //Calculo para o PIB per capita
 
+    printf ("\n");
+
     printf ("**VAMOS CALCULAR O PIB PER CAPITA DA CIDADE 1** \n");
 
-    printf ("Entre com o PIB da cidade 1: \n");
+    printf ("Entre com PIB da cidade 1: \n");
     scanf ("%d", &PIB1);
     printf ("Entre com o número da população 1: \n");
     scanf ("%f", &População1);
 
 
+
+printf ("\n");
 
     /*Carta 1: Resultados do cadastro*/
 
@@ -74,6 +84,7 @@ int main() {
     printf ("Pontos turísticos da cidade 1:  %d \n", Pontos1);
     printf ("A Densidade Populacional 1 é: %4.f \n", DensidadePopulacional1);
     printf ("A Renda per capita 1 é: %4.f \n", PIBpercapta1);
+    printf ("Super Poder da cidade 1 é: %.5f \n", SuperPoder1);
 
 
 
@@ -88,8 +99,15 @@ int main() {
     int Pontos2 = 19;
     float DensidadePopulacional2 = (float) População2 / Área2;
     float PIBpercapta2 = (float) PIB2 / População2;
+    float SuperPoder2 = (float) População2 + Área2 + PIB2 + Pontos2 + PIBpercapta2 + DensidadePopulacional2;
+
+
+printf ("\n");
 
     /*Carta 2: local para cadastrar as informações*/
+
+    printf ("** CADASTRE A CIDADE 2 ** \n");
+
     printf ("Digite a letra do Estado 2: \n");
     scanf (" %c", &Estado2);
 
@@ -113,12 +131,16 @@ int main() {
 
     //Calculo para a Densidade Populacional
 
+    printf ("\n");
+
     printf ("**VAMOS CALCULAR A DENSIDADE POPULACIONAL DA CIDADE 2** \n");
 
     printf ("Entre com o número da população 2: \n");
     scanf ("%d", &População2);
     printf ("Entre com a área da cidade 2: \n");
     scanf ("%f", &Área2);
+
+    printf ("\n");
 
     //Calculo para o PIB per capita
 
@@ -131,6 +153,8 @@ int main() {
 
     /*Carta 2: Resultados do cadastro*/
 
+    printf ("\n");
+
     printf ("****RESULTADOS DA CIDADE 2**** \n");
 
     printf ("Letra da cidade 2:  %c \n", Estado2);
@@ -142,6 +166,31 @@ int main() {
     printf ("Pontos turísticos da cidade 2:  %d \n", Pontos2);
     printf ("A Densidade Populacional 2 é: %4.f \n", DensidadePopulacional2);
     printf ("A Renda per capita 2 é: %4.f \n", PIBpercapta2);
+    printf ("Super Poder da cidade 2 é: %.5f \n", SuperPoder2);
+
+    //Local para a comparação das cartas do jogo
+
+    printf ("\n");
+    printf ("\n");
+
+    printf ("*** HORA DO DUELO ***\n");
+    printf ("****VALOR 1 = Cidade1 Ganhou!!  VALOR 0 = Cidade2 Ganhou!!**** \n");
+
+    printf("Qual cidade tem maior número de População? \n População1 >  População2: !!%d!! \n", 
+          (unsigned) População1 > População2);
+    printf("Qual cidade tem maior Área (em km²)? \n Área1 > Área2 = !!%d!! \n",
+          (unsigned) Área1 > Área2);
+    printf("Qual cidade tem maior PIB (produto interno bruto)? \n PIB1 > PIB2  = !!%d!! \n",
+          (unsigned) PIB1 > PIB2);
+    printf("Qual cidade tem mais Pontos Turísticos? \n Pontos1 > Pontos2 = !!%d!! \n",
+          (unsigned) Pontos1 > Pontos2);
+    printf("Qual cidade tem menor Densidade Populacional? \n Densidade P.1 < Densidade P.2 = !!%d!! \n",
+          (unsigned) DensidadePopulacional1 > DensidadePopulacional2);
+    printf("Qual cidade tem maior Renda Per Capita? \n PIBpercapta1 > PIBpercapta2  = !!%d!! \n",
+          (unsigned) PIBpercapta1 > PIBpercapta2);   
+    printf("Qual cidade tem o maior Super Poder? \n Super Poder1 > Super Poder2  = !!%d!! \n",
+          (unsigned) SuperPoder1 > SuperPoder2);
+
 
 
     return 0;
